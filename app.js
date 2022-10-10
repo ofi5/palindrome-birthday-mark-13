@@ -3,6 +3,8 @@ const Btn = document.querySelector('#btn');
 const Msg = document.querySelector("#msg")
 
 
+
+
 const convertDatetoformat= (Date) => {
     let Dae = Date.split("")
     let year = Dae.slice(0,4)
@@ -35,7 +37,7 @@ const increaseDate=(date) => {
     let newMonth = Number(NewDate.slice(2,4).join(""))
     let newYear = Number(NewDate.slice(4,6).join(""))
 
-if (newYear%4==0 && newMonth==2 && newDay==28){
+if (newYear%4 ==0 && newMonth == 2 && newDay==28){
     newDay = 29
 
 } else if (newYear == 99 && (newMonth == 12) && (newDay == 31)){
@@ -191,6 +193,7 @@ const decreaseDate=(date) => {
 
 
 const checkPalindrome = () => {
+    if (Dob.value){
     let date = Dob.value.replaceAll("-","")
     // console.log(typeof(date))
     // let Date = convertDatetoformat(date);
@@ -252,6 +255,11 @@ const checkPalindrome = () => {
         Msg.innerHTML = `Sorry, Your birthday is not a palindrome in DDMMYY format. <p>The closest palindrome date before your Birthday is on ${Date1} and ${count1} day/days before.</p>
         <p>The closest Palindrome date after your Birthday is on ${Date2} and ${count2} day/days after.</p>`
     }
+    }
+    else {
+        Msg.innerHTML = "Enter Date"
+    }
+
 }
 
 Btn.addEventListener("click", checkPalindrome);
