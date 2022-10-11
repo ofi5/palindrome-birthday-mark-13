@@ -303,7 +303,7 @@ const checkPalindrome = () => {
         }
     
     if ((count1 == 0) || (count2==0)){
-        Msg.innerHTML = `🎉🎉🎉🎉🎉Congratulation your Birthday ${Date1} (${format1}) is a Palindrome 🎉🎉🎉🎉🎉`
+        Msg.innerHTML = `🎉🎉🎉🎉Congratulation your Birthday ${Date1} (${format1}) is a Palindrome 🎉🎉🎉🎉`
         
     } else {
         Msg.innerHTML = `Sorry, Your birthday is not a palindrome. <p>The closest palindrome date before your Birthday is on ${Date2}(${format2}) and ${count2} day/days before.</p>
