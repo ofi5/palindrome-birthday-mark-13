@@ -264,7 +264,7 @@ const checkPalindrome = () => {
 
 
     let Date1 = convertDatetoformat(DDMMYYYY);
-    console.log(Date1)
+   
     let Date2 = convertDatetoformat(DDMMYYYY);
 
     find1 = false;
